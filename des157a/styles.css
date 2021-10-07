@@ -12,7 +12,7 @@ body{
     background: linear-gradient(0deg, rgba(68,194,232,1) 0%, rgba(74,255,215,0) 100%);
     margin: auto;
     animation-name: bodycolorchange;
-    animation-duration: 5s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -193,9 +193,9 @@ footer li {
 }
 
 @keyframes bodycolorchange {
-    0% {background: linear-gradient(0deg, rgb(60, 108, 212) 0%, rgba(74,255,215,0) 100%)};
-    25% {background: linear-gradient(0deg, rgb(124, 108, 199) 0%, rgba(74,255,215,0) 100%)}
-    50% {background: linear-gradient(0deg, rgb(207, 144, 231) 0%, rgba(74,255,215,0) 100%)}
-    75% {background: linear-gradient(0deg, rgb(118, 186, 226) 0%, rgba(74,255,215,0) 100%)}
-    100% {background: linear-gradient(0deg, rgb(118, 147, 226) 0%, rgba(74,255,215,0) 100%)}
+    0% {background: linear-gradient(0deg, rgb(60, 108, 212) 0%, rgba(255, 255, 255, 0) 100%)};
+    25% {background: linear-gradient(0deg, rgb(118, 186, 226) 0%, rgba(255, 255, 255, 0) 100%)}
+    50% {background: linear-gradient(0deg, rgb(118, 147, 226) 0%, rgba(255, 255, 255, 0) 100%)}
+    75% {background: linear-gradient(0deg, rgb(124, 108, 199) 0%, rgba(255, 255, 255, 0) 100%)}
+    100% {background: linear-gradient(0deg, rgb(207, 144, 231) 0%, rgba(255, 255, 255, 0) 100%)}
 }
