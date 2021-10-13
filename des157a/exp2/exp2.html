@@ -23,15 +23,15 @@
         }
 
         var bodyColor = document.getElementsByTagName('body');
-
+        var newColor = diffColors[randomInt(0, 2)];
         // for(var i=0; i<bodyColor.length; i++){
-            if(capitalizeInput == diffColors[randomInt(0, 2)]){
+            if(capitalizeInput == newColor){
                 bodyColor[0].style.backgroundColor = capitalizeInput;
                 console.log('You guessed correctly!');
             }
             else{
                 
-                bodyColor[0].style.backgroundColor= diffColors[randomInt(0, 2)];
+                bodyColor[0].style.backgroundColor= newColor;
                 console.log('Not Quite');
             }
 
