@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+    <h1>Experiment 2</h1>
+    <h2>What Primary Color am I thinking of</h2>
+    <script>
+        var userInput = prompt('Enter a word', "");
+
+
+        capitalizeInput = userInput.toUpperCase();
+
+        
+        var diffColors = ["RED","GREEN","BLUE"];
+
+        function randomInt( min, max){
+            return Math.floor((max-min +1) * Math.random())+ min;
+        }
+
+        var bodyColor = document.getElementsByTagName('body');
+
+        // for(var i=0; i<bodyColor.length; i++){
+            if(capitalizeInput == diffColors[randomInt(0, 2)]){
+                bodyColor[0].style.backgroundColor = capitalizeInput;
+                console.log('You guessed correctly!');
+            }
+            else{
+                
+                bodyColor[0].style.backgroundColor= diffColors[randomInt(0, 2)];
+                console.log('Not Quite');
+            }
+
+        // }
+
+    </script>
+
+    
+</body>
+</html>
