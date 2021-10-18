@@ -1,0 +1,22 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 2em;
+}
+
+article{
+    background-color: rgb(75, 75, 131);
+    color: white;
+    width: 50%;
+    height:50%;
+    margin: auto;
+    padding: 20px;
+}
+
+footer{
+    text-align: center;
+}
