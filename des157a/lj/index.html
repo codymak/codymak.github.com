@@ -5,33 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.typekit.net/mug3itx.css">
+
+
     <title>Learning Journal</title>
 </head>
-<body>
+<body >
+    <div>
+        <div id="moon"></div>
+        
+    </div>
+    <div>
+        <div id="cloud3"></div>
+        
+    </div>
 
-    <article>
-        <h2>Best Practices for form design</h2>
-        <date>10/17/2021</date>
-        <p>
-            There are a lot of different ways to improve the legibility and user experience of websites. These methods focus on the designer’s decision to improve the layout of content and images. One thing that struck out me is to always “ask the easy questions first”. Instead of asking a dense question first, we can ask the easier questions to prevent intimidation of the readers. There should always be requirements for the users in case the system cannot pick up any inputs and cannot give the users feedback on their next steps.  Be very transparent with the users about how their information will be used. The website should always employ user experience principles, which include accessibility features to deliver effective communication. 
-        </p>
+    <div>
+        <div id="cloud2"></div>
+        
+    </div>
 
-    </article>
+    <div>
+        <div id="cloud"></div>
+        
+    </div>
 
+    <div>
+        <div id="myName">
+            <h2>Learning Journals</h2>
+            <h3>By: Cody Mak</h3>
+        </div>
+    </div>
+    <div class = "container">
+        <article>
+            <h2>Best Practices for Modals/Overlays/Dialog Windows</h2>
+            <date>10/19/2021</date>
+            <p>
+                I read <a href="https://uxplanet.org/best-practices-for-modals-overlays-dialog-windows-c00c66cddd8c">Best Practices for Modals/Overlays/Dialog Windows.</a> To start, a modal window is "an element that sits on top of an application's main window". Simply, this modal window has many different uses. It is a tool to acquire user input, or show any additional information that is useful to navigate through the page. It may also give the users options to view show other pages. Regardless, there are many different uses behind the structure of the page.
+                <br>
+                <br>
+                The Best practices for form design should always have options for the users to escape the web. This includes using buttons to escape or backtrack progress that the user has made on the web. The web should always have directions for the user to input information. Sizing and location should always guide the user experience by fitting the most important information in a convenient way. Initiate the users by promoting them to let the users take action over their screens. Be aware of accessibility for the users to take actions on the page.
+            </p>
+        </article>
+        <br>
+    
+        <article>
+            <h1>Best Practices for form design</h1>
+            <date>10/17/2021</date>
+            <p>
+                There are a lot of different ways to improve the legibility and user experience of websites. These methods focus on the designer’s decision to improve the layout of content and images. One thing that struck out me is to always “ask the easy questions first”. Instead of asking a dense question first, we can ask the easier questions to prevent intimidation of the readers. There should always be requirements for the users in case the system cannot pick up any inputs and cannot give the users feedback on their next steps.  Be very transparent with the users about how their information will be used. The website should always employ user experience principles, which include accessibility features to deliver effective communication. 
+            </p>
+    
+        </article>
 
+    </div>
+    
 
+     <script>
+        var pageTop;
+        var bodyTag = document.querySelector('body');
+        window.addEventListener('scroll', function(){
+            pageTop= window.pageYOffset;
+
+            switch(true){
+                case pageTop <100: bodyTag.className = "one"; break;
+                case pageTop <500: bodyTag.className = "two"; break;
+                case pageTop <1000: bodyTag.className = "three"; break;
+                case pageTop < 2000: bodyTag.className = "four"; break;
+                default: bodyTag.className = "five"
+
+            }
+
+        });
+
+    </script>
 </body>
 <footer>
-        <ul>
-            <li>
-                <a href="mailto:comak@ucdavis.edu">My Email</a>
-            </li>
-            <li>
-                <a href="https://validator.w3.org/check?uri=referer">html validator</a>
-            </li>
-            <li>
-                <a href="https://jigsaw.w3.org/css-validator/check/referer">css Validator</a>
-            </li>
-        </ul>
+        <div>
+            <a href="mailto:comak@ucdavis.edu">My Email</a>
+        </div>
+        <div>
+            <a href="https://validator.w3.org/check?uri=referer">html validator</a>
+        </div>
+        <div>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">css Validator</a>
+        </div>
 </footer>
 </html>

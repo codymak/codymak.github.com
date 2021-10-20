@@ -4,19 +4,151 @@
 }
 
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    font-family: mencken-std-head, sans-serif;
+
     line-height: 2em;
+    /* height: 3000px; */
 }
 
+.one{ background-color: rgb(12, 10, 10); transition: all 3s;}
+.two{ background-color: rgb(38, 56, 90); transition: all 3s;}
+.three{ background-color: rgb(206, 127, 37); transition: all 3s;}
+.four { background-color: rgb(61, 34, 21); transition: all 3s;}
+.five { background-color: rgb(124, 90, 45); transition: all 3s;}
+
+a{
+    color: rgb(181, 136, 255);
+}
 article{
-    background-color: rgb(75, 75, 131);
-    color: white;
-    width: 50%;
+    /* display: flex; */
+    position: relative;
+    right: -300px;
+    background-color: rgba(22, 22, 22, 0);
+    /* border: .1px solid; */
+    border-color: rgb(255, 255, 255);
+    /* border-radius: 20px; */
+    color: rgb(255, 255, 255);
+    width: 30%;
     height:50%;
     margin: auto;
-    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    /* padding-bottom: 50px; */
+}
+p{ padding-bottom: 100px;
+    border-bottom: 1px solid white;
+}
+#myName{
+    position: fixed;
+    color:white;
+    text-align: center;
+    bottom: 80px;
+    left: 300px;
+
 }
 
 footer{
-    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
 }
+#moon{
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 255, 126);
+    border-radius: 100%;
+    top: 200px;
+    left: 250px;
+}
+
+#cloud{
+    position:fixed;
+    background-color: rgb(115, 114, 148);
+    width: 10px;
+    height: 80px;
+    border-radius: 80px;
+    bottom: 250px;
+    animation-duration: 4s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#cloud2{
+    position:fixed;
+    background-color: rgb(66, 65, 94);
+    width: 100px;
+    height: 80px;
+    border-radius: 80px;
+    left: 5px;
+    bottom: 200px;
+    animation-duration: 2s;
+    animation-name: sCloud2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#cloud3{
+    position:fixed;
+    background-color: rgb(39, 37, 75);
+    width:75px;
+    height: 100px;
+    border-radius: 100px;
+    left: 150px;
+    bottom: 250px;
+    animation-duration: 3s;
+    animation-name: sCloud3;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes slidein{
+    from{
+        margin-left: 30%;
+        width: 10%;
+    }
+
+    to {
+        margin-left: 20%;
+        width: 12%;
+    }
+}
+
+@keyframes sCloud2{
+    from{
+        margin-left: 30%;
+        width: 10%;
+        /* height: 15%; */
+    }
+
+    to {
+        margin-left: 15%;
+        width: 20%;
+        height: 10%;
+    }
+}
+
+@keyframes sCloud3{
+    from{
+        margin-right: 35%;
+        width: 12%;
+        height: 10%;
+    }
+
+    to {
+        margin-left: 20%;
+        width: 18%;
+        height: 12%;
+    }
+}
+
+
+
+
+/* h2{
+    text-align: center;
+    padding: 100px;
+  
+} */
