@@ -1,3 +1,7 @@
+*{
+    list-style-type: none;
+}
+
 body{
     display: flex;
     background: linear-gradient(328deg, rgba(144,22,132,1) 14%, rgba(39,14,70,1) 56%);
@@ -293,6 +297,21 @@ label{
 }
 
 
+footer{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+}
 
 
 
