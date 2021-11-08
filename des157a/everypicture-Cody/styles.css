@@ -1,0 +1,268 @@
+*{
+    list-style-type: none;
+}
+
+
+.one {
+    background-color: rgb(48, 21, 34);
+    transition: all 3s;
+}
+
+.two {
+    background-color: rgb(109, 74, 102);
+    transition: all 3s;
+}
+
+.three {
+    background-color: rgb(139, 68, 104);
+    transition: all 3s;
+}
+
+.four {
+    background-color: rgb(184, 73, 110);
+    transition: all 3s;
+}
+
+.five {
+    background-color: rgb(211, 93, 99);
+    transition: all 3s;
+}
+
+body {
+    background-color: #fef5ff00;
+    font-family: playfair-display, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+figure {
+    display: block;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    /* position: fixed; */
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+figure img {
+    position: absolute;
+    transition: all 3s ease;
+}
+
+#circles {
+    position: relative;
+}
+
+#middleText {
+    font-size: 2em;
+    position: absolute;
+    left: 30%;
+    bottom: 40%;
+}
+
+#circles div button{
+    position: absolute;
+    width: 312px;
+    height: 312px;
+    border-radius: 100%;
+    border: none;
+    background-color: rgba(207, 97, 152, 0.603);
+    transition: 2s;
+}
+#circles div button:hover{
+    background-color: rgba(125, 255, 255, 0);
+}
+
+#circle1 {
+    top: 1081px;
+    left: 146px;
+}
+
+#circle2 {
+    top: 1199px;
+    left: 914px;
+}
+
+#circle3 {
+    top: 1570px;
+    left: 509px;
+}
+
+#circle4 {
+    top: 2111px;
+    left: 86px;
+}
+
+#circle5 {
+    top: 2030px;
+    left: 945px;
+}
+
+
+/* Overlay CSS */
+
+.overlay {
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    background-color: white;
+}
+
+#storyText {
+    position: relative;
+    width: 25%;
+    background-color: rgb(255, 242, 242);
+    padding: 100px;
+}
+
+#storyImage {
+    position: fixed;
+    margin: auto;
+    padding-left: 30%;
+    padding-top: 100px;
+    width: 75%;
+}
+
+#storyContainer {
+    display: block;
+    text-align: center;
+}
+
+button {
+    /* glenda commented out the width and height */
+    /* width: 200px;
+    height: 50px; */
+    padding: 10px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgb(255, 228, 251);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(166, 255, 255);
+}
+
+
+#buttonContainer {
+    /* glenda added position */
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    /* glenda commented out the padding */
+    /* padding-top: 50px; */
+}
+
+p {
+    /* from glenda: I think this much line height dissociates the lines of text to be read as a group, so I recommend lessening the value */
+    line-height: 2.75em;
+    margin-bottom: 25px;
+}
+
+h1 {
+    border-bottom: black;
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: flex;
+}
+
+
+#waves{
+    position: absolute;
+    top: 598px;
+    left: -154px;
+}
+
+/* Boba Ball Animations */
+.ball{
+    position: absolute;
+    border-radius: 100%;
+    background-color: rgb(104, 177, 104);
+
+    animation-name: boba1ani;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+#boba1{
+    width: 42px;
+    height: 42px;
+
+    top: 997px;
+    left: 651px;
+
+    animation-duration: 6s;
+}
+
+
+#boba2{
+    width: 69px;
+    height: 69px;
+
+    top: 1085px;
+    left: 1217px;
+
+    animation-duration: 5s;
+}
+
+#boba3{
+    width: 69px;
+    height: 69px;
+
+    top: 1723px;
+    left: 112px;
+
+    animation-duration: 4s;
+}
+
+#boba4{
+    width: 55px;
+    height: 55px;
+
+    top: 2323px;
+    left: 699px;
+
+    animation-duration: 3s;
+}
+
+
+@keyframes boba1ani {
+
+    from{
+        margin-top:20px;
+    }
+    to{
+        margin-top: 50px;
+    }
+    0% {background-color:#f9dbff;}
+    25% {background-color: #ec9ac7;}
+    50% {background-color: #d87093;}
+    75% {background-color: #b1436d;}
+    100% {background-color:#94306e}
+}
+
+footer{
+    display: flex;
+    position: absolute;
+    top:2639px;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+}
