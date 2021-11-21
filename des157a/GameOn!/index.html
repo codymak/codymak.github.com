@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of PIG</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/mug3itx.css">
+
+
+</head>
+
+<body>
+    <main id="everything">
+        <section id="instructions">
+            <h1>You, Win My Heart</h1>
+            <p>Well, hello there. Who are you? You seem like a person who can win my heart. 
+            </p> 
+            <h3>You can win my heart by getting three full hearts. </h3>
+            <ul>
+                <li>You can gain 1 full heart if you pull a queen of hearts.</li>
+                <li>You can gain 1/2 if you pull an ace of hearts. </li>
+                <li>You can get 1/2 heart deducted if you pull a Jack of Hearts.</li>
+        
+            </ul>
+            <p> Maybe you're the only one who truly understands me, my directions brought you, to me. hello, you.</p>
+        </section>
+    
+        <section id="gameItself">
+            <div id="gamecontrol">
+                <div id="startContainer">
+                    <h2>Start a Game</h2>
+                    <button id="startgame">Randomly Pick the First Player, and Start the Game</button>
+                </div>
+            </div>
+            <div id="score"></div>
+            <div id="defaultCards"> 
+                <img id="card1" src="blank.png" alt="card1">
+                <img id="card2" src="blank.png" alt="card2">
+            </div>
+        
+            <div id="game"></div>
+            <div id="actions"></div>
+        </section>
+
+        <div id="heartContainer">
+            <div id="heart1" class= "heart">
+                <img src="hearts.png" alt="first heart">
+            </div>
+        
+            <div id="heart2" class = "heart">
+                <img src="hearts.png" alt="second heart">
+            </div>
+        
+            <div id="heart3" class = "heart">
+                <img src="hearts.png" alt="third heart">
+            </div>
+
+            <div id="heart4" class = "heart">
+                <img src="hearts.png" alt="fourth heart">
+            </div>
+            <div id="heart5" class = "heart">
+                <img src="hearts.png" alt="fifthheart">
+            </div>
+
+            <div id="heart6" class = "heart">
+                <img src="hearts.png" alt="sixth heart">
+            </div>
+        </div>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href="mailto:comak@ucdavis.edu">Email me</a>
+                </li>
+                <li>
+                    <a href="https://validator.w3.org/check?uri=referer">html validator</a>
+                </li>
+                <li>
+                    <a href="https://jigsaw.w3.org/css-validator/check/referer">css Validator</a>
+                </li>
+            </ul>
+        </footer>
+    </main>
+
+    
+
+    <script>
+        var startGame = document.getElementById('startgame');
+        var gameControl = document.getElementById('gamecontrol');
+        var game = document.getElementById('game');
+        var score = document.getElementById('score');
+        var actionArea = document.getElementById('actions');
+
+        const card1 = document.getElementById('card1');
+        const card2 = document.getElementById('card2');
+
+
+        var gameData = {
+            cards: ['QHearts.png','AHearts.png','JHearts.png'],
+            players: ['player 1', 'player 2'],
+            score:[0,0],
+            flips1: 0,
+            flips2: 0,
+            index: 0,
+            gameEnd: 3
+        };
+        // console.log(gameData);
+
+
+        startGame.addEventListener('click', function(){
+            gameData.index = Math.round(Math.random());
+
+            gameControl.innerHTML = '<h2>The Game has Started</h2>';
+            gameControl.innerHTML = '<button id="quit">Wanna Quit?</button>';
+
+            document.getElementById('quit').addEventListener('click', function(){
+                location.reload();
+            })
+
+            setUpTurn();
+        })
+       
+        function setUpTurn(){
+            
+            document.getElementById('defaultCards').style.visibility = "visible";
+
+            game.innerHTML = `<p> Flip the card for the ${gameData.players[gameData.index]} </p>`;
+
+            document.getElementById('card1').src = "blank.png";
+            document.getElementById('card2').src = "blank.png";
+
+            
+            if(gameData.index ==0){
+                document.getElementById('card2').removeEventListener('click', flipCard2);
+
+                document.getElementById('card1').addEventListener('click', flipCard1)
+            }
+            else{
+                document.getElementById('card1').removeEventListener('click', flipCard1);
+                
+                document.getElementById('card2').addEventListener('click', flipCard2);
+            }
+        }
+
+        
+        function flipCard1(){
+            document.getElementById('card1').removeEventListener('click', flipCard1);
+
+            gameData.flips1 = Math.floor(Math.random()* 3);
+            document.getElementById("card1").src= gameData.cards[gameData.flips1];
+
+            // setTimeout(flipCard1, 3000);
+
+            //if a queen is pulled
+            if(gameData.cards[gameData.flips1] == gameData.cards[0]){
+                gameData.score[gameData.index] += 1;
+                console.log('a queen is flipped');
+                gameData.index= 1;
+                checkWinningCondition();
+                setTimeout(setUpTurn,2000);
+
+            }
+
+            // if an ace is pulled
+            else if(gameData.cards[gameData.flips1] == gameData.cards[1]){
+                gameData.score[gameData.index] += .5;
+                console.log('an Ace is flipped');
+                gameData.index= 1;
+                setTimeout(setUpTurn,2000);
+                checkWinningCondition()
+                
+            }
+
+            // if a jack is pulled
+            else{
+                gameData.score[gameData.index] -= .5;
+                console.log('a Jack is flipped');
+                gameData.index =1;
+                setTimeout(setUpTurn,2000);
+                checkWinningCondition()
+
+            }
+
+        }
+
+        function flipCard2(){
+            document.getElementById('card2').removeEventListener('click', flipCard2);
+            gameData.flips2 = Math.floor(Math.random() * 3);
+            document.getElementById("card2").src= gameData.cards[gameData.flips2];
+
+            //if a queen is pulled
+            if(gameData.cards[gameData.flips2] == gameData.cards[0]){
+                gameData.score[gameData.index] += 1;
+                console.log('a queen2 is flipped');
+                gameData.index=0;
+                setTimeout(setUpTurn,2000);
+                checkWinningCondition()
+            }   
+
+            // if an ace is pulled
+            else if(gameData.cards[gameData.flips2] == gameData.cards[1]){
+                gameData.score[gameData.index] += .5;
+                console.log('an Ace2 is flipped');
+                gameData.index=0;
+                setTimeout(setUpTurn,2000);
+                checkWinningCondition()
+            }
+
+            // if a jack is pulled
+            else{
+                gameData.score[gameData.index] -= .5;
+                    console.log('a Jack2 is flipped');
+                    gameData.index = 0;
+                    setTimeout(setUpTurn,2000);
+                    checkWinningCondition()
+            }
+
+        }
+
+
+        function checkWinningCondition(){
+            if(gameData.score[gameData.index] >= gameData.gameEnd){
+                score.innerHTML = `<h2>${gameData.players[gameData.index]}
+                wins with ${gameData.score[gameData.index]} points! </h2>`;
+                    
+                actionArea.innerHTML = '';
+                document.getElementById('quit').innerHTML ="Start a New Game?";
+            }
+            else{
+                showCurrentScore();
+               
+            }
+        }
+        
+        function showCurrentScore(){
+            score.innerHTML = `<p> The score is currently <strong>${gameData.players[0]}
+                ${gameData.score[0]}</strong> and <strong>${gameData.players[1]}
+                ${gameData.score[1]} </strong></p>`;
+        }
+    </script>
+    
+</body>
+
+</html>

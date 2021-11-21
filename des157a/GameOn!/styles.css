@@ -1,0 +1,189 @@
+body {
+    font-family: Arial;
+    color: rgb(255, 255, 255);
+    padding: 40px;
+    line-height: 1.5em;
+    background-color: #ff9393;
+
+    width: 1368px;
+    height: 768px;
+    overflow: hidden;
+    animation-name: bodycolorchange;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    font-family: modesto-open-inline-fill, sans-serif;
+    font-size: .98em;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+#everything{
+    display: flex;
+}
+
+#heartContainer div{
+    position: absolute;
+}
+
+.heart{
+    width: 10px;
+    height: 10px;
+
+    animation-name: heart1ani;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#heart1{
+    top: 115px;
+    left: 425px;
+
+    animation-duration: 3s;
+}
+
+#heart2{
+    top: 400px;
+    left: 500px;
+
+    animation-duration: 2s;
+}
+
+#heart3{
+    top: 500px;
+    left: 900px;
+
+    animation-duration: 3.5s;
+}
+
+#heart4{
+    top: 300px;
+    left: 1300px;
+
+    animation-duration: 3s;
+}
+
+#heart5{
+    top: 20px;
+    left: 1200px;
+
+    animation-duration: 2s;
+}
+
+#heart6{
+    top: 375px;
+    left: 5px;
+
+    animation-duration: 1s;
+}
+
+
+
+
+
+#instructions{
+    padding: 20px;
+    width: 30%;
+    line-height: 2em;
+}
+
+#gameItself{
+    padding: 20px;
+    width: 70%;
+}
+
+#gameItself p{
+    text-align: center;
+}
+button { 
+    padding: 10px;
+}
+
+button:hover{
+    background-color: rgb(255, 122, 122);
+    color: white;
+}
+
+/* div {
+    padding: 20px;
+} */
+
+#startContainer{
+    padding-top: 200px;
+    text-align: center;
+}
+
+/* #gamecontrol, #score {
+    background-color: #ff9393;
+} */
+
+#game {
+    /* background-color:#ff9393; */
+    height: 50px;
+}
+
+
+#card1{
+    padding-right: 50px;
+}
+
+#card2{
+    padding-left: 50px;
+}
+#defaultCards{
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+}
+
+button{
+    background-color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 15px;
+    margin: 10px;
+    color: #b32f2f;
+}
+
+@keyframes bodycolorchange {
+    0% {background-color:#ff9393;}
+    25% {background-color: #cf5241;}
+    50% {background-color: #c23239;}
+    75% {background-color: #771b1e;}
+    100% {background-color:#c53838}
+}
+
+@keyframes heart1ani{
+
+    from{
+        margin-top:20px;
+    }
+    to{
+        margin-top: 50px;
+    }
+}
+
+footer{
+    display: flex;
+    position: absolute;
+    top: 600px;
+    left: 1250px;
+    font-size: 10px;
+}
+footer ul{
+    justify-content: space-between;
+}
+footer ul li{
+    list-style-type: none;
+}
+
+footer ul li a{
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+footer ul li a:hover{
+    color:rgb(224, 206, 45);
+}
