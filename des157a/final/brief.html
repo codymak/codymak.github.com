@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project Brief</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/mug3itx.css">
+</head>
+<body>
+    <section id="introduction">
+        <h1>Project Brief</h1>
+        <p>I intend to recreate Every Pictures into a more user-friendly website to tell a more emotional story</p>
+    </section>
+  
+    <section id="comparison">
+        <div id="firstComparison">
+            <h2>Comparison Project 1</h2>
+            <figure>
+                <img src="images/cubertos.png" alt="cubertos">
+                <figcaption>This is Curberto's website</figcaption>
+            </figure>
+            <p>When I visited <a href="https://cuberto.com/">Cuberto's Website </a>Cuberto's website, the interface appeared very simple and minimalistic. However, as I scrolled through the website, all the interaction features were hidden in plain site. Upon hovering over texts and images, the interactions became visible and changed the entire experience for the user. It was very fascinating to see how a minimalistic layout could hold a lot of potential for great story telling. The colors begin to change and the images are warped in a way where it is able to tell a story. Through one hover effect begins many directions for the users to take. It is exactly what I plan to use for my final project in the Every Pictures revisions. </p>
+        </div>
+    
+        <div id="secondComparison">
+            <h2>Comparison Project 2</h2>
+            <figure>
+                <img src="images/30species.png" alt="30 species">
+                <figcaption>This is Curberto's website</figcaption>
+            </figure>
+            <p><a href="https://muffingroup.com/blog/best-interactive-websites/">30 Species Website</a> uses purely CSS to create interactive animations. This website was fascinating because all the interactions were very simple. Simply scroll down to reveal more stories about the different endangered species. It was very beautiful to witness all the animations being done as I scroll through the pages. I also enjoyed how the background color changes as each animals were changing. The design layout is very enjoyable to see, and it's minimalistic layout through CSS makes it feel even more exciting.</p>
+        </div>
+    </section>
+   
+    <section id="projectGoals">
+        <h2>Project Goals</h2>
+        <p>
+            The two comparisons were inspiring for me because they employed very simplistic designs. Yet, they were able to create an effective website to display their stories effectively. I want to set the goal of creating an interactive design while making it simple and effective
+        </p>
+
+        
+    </section>
+    <section id="strategies">
+        <div id="designStrategies">
+            <h2>Design Strategies</h2>
+            <p>I want to:</p>
+            <ul>
+                <li>Define</li>
+                <li>Brainstorm</li>
+                <li>Ideate</li>
+                <li>Test</li>
+                <li>Revise</li>
+            </ul>
+        </div>
+
+        <div id="intStrategies">
+            <h2>Interaction Strategies</h2>
+            <p>I want to:</p>
+            <ul>
+                <li>Employ Smooth Transitions</li>
+                <li>Utilize CSS Animations</li>
+                <li>Create Simple user flow</li>
+                <li>Design with easy interactions</li>
+                <li>Implement Javascript Timed-functions</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="expGoals">
+        <h2>Experience Goals</h2>
+        <p>I want to be able to improve upon my past design. I chose a safer route to design for the Every Day Project, but I want to challenge myself further. All while considering a smooth user-flow experience, I want to be able to confidently use Javascript functions and elements to deliver an effective story</p>
+    </section>
+
+    <script>
+        var pageTop;
+        var bodyTag = document.querySelector('body');
+        window.addEventListener('scroll', function(){
+            pageTop= window.pageYOffset;
+
+            switch(true){
+                case pageTop <500: bodyTag.className = "one"; break;
+                case pageTop <1000: bodyTag.className = "two"; break;
+                case pageTop <1500: bodyTag.className = "three"; break;
+                case pageTop < 2000: bodyTag.className = "four"; break;
+                default: bodyTag.className = "five"
+
+            }
+
+        });
+
+    </script>
+    <footer>
+        <div>
+            <a href="mailto:comak@ucdavis.edu">My Email</a>
+        </div>
+        <div>
+            <a href="https://validator.w3.org/check?uri=referer">html validator</a>
+        </div>
+        <div>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">css Validator</a>
+        </div>
+    </footer>
+</body>
+
+</html>

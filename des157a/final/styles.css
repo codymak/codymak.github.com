@@ -1,0 +1,58 @@
+body{
+    width: 1368px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(63, 63, 63);
+    margin: auto;
+    padding: 50px;
+
+    font-family: playfair-display, serif;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+#comparison{
+    display: flex;
+}
+
+#comparison div{
+    padding: 50px;
+    width: 45%;
+}
+
+p{
+    line-height: 2.5em;
+}
+
+#strategies{
+    display: flex;
+    padding: 20px;
+    margin: auto;
+}
+
+#strategies div{
+    padding: 50px;
+    width: 45%;
+}
+
+#expGoals{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+
+.one{ background-color: rgb(255, 255, 255); transition: all 3s;}
+.two{ background-color: rgb(213, 228, 255); transition: all 3s;}
+.three{ background-color: rgb(255, 234, 210); transition: all 3s;}
+.four { background-color: rgb(247, 187, 255); transition: all 3s;}
+.five { background-color: rgb(255, 223, 181); transition: all 3s;}
+
+footer{
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(40, 34, 126);
+}
