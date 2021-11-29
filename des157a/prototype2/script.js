@@ -9,16 +9,16 @@
         pageTop = window.pageYOffset;
 
         switch (true) {
-            case pageTop < 1000:
+            case pageTop < 750:
                 bodyTag.className = "one";
                 break;
-            case pageTop < 2500:
+            case pageTop < 2200:
                 bodyTag.className = "two";
                 break;
-            case pageTop < 3500:
+            case pageTop < 4500:
                 bodyTag.className = "three";
                 break;
-            case pageTop < 4500:
+            case pageTop < 6000:
                 bodyTag.className = "four";
                 break;
             default:
@@ -61,50 +61,43 @@
         topFunction();
     });
 
-    function topFunction() {
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      }
+
 
 
     // from glenda: you had the query selector looking for an id but you had defined leave as a class in the html
     document.querySelector('#leave1').addEventListener('click', function() {
         console.log('clicking button');
-        sections[0].className = "show";
+        sections[0].className = "showing";
         sections[1].className = "overlay hidden";
 
-       
-       console.log(sections[0])
-        sections[0].scrollTo({ behavior: "smooth", top: "100%" });
     });
     document.querySelector('#leave2').addEventListener('click', function() {
         console.log('clicking button');
-        sections[0].className = "show";
+        sections[0].className = "showing";
         sections[2].className = "overlay hidden";
 
-        document.querySelector('#section2').scrollIntoView();
     });
     document.querySelector('#leave3').addEventListener('click', function() {
         console.log('clicking button');
-        sections[0].className = "show";
+        sections[0].className = "showing";
         sections[3].className = "overlay hidden";
 
-        document.querySelector('#section3').scrollIntoView();
     });
     document.querySelector('#leave4').addEventListener('click', function() {
         console.log('clicking button');
-        sections[0].className = "show";
+        sections[0].className = "showing";
         sections[4].className = "overlay hidden";
 
     });
     document.querySelector('#leave5').addEventListener('click', function() {
         console.log('clicking button');
-        sections[0].className = "show";
+        sections[0].className = "showing";
         sections[5].className = "overlay hidden";
 
     });
 
-    function onLinkClick() {
-        document.querySelector('#section3').scrollIntoView();
+    function topFunction() {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
 
     // grab the element with id="leave", for example <div id="leave"></div>
@@ -127,7 +120,7 @@
         /* Everything in this event handler runs everytime the window 
         is scrolled just a little bit. Be careful about preformance */
         window.addEventListener('scroll', function () {
-            pageTop = window.pageYOffset + 450;
+            pageTop = window.pageYOffset + 375;
             // console.log(pageTop);
     
             // if the user is scrolling down the page...
@@ -159,7 +152,7 @@
     
                 resetPagePosition();
     
-            }, 200);
+            }, 300);
         });
     
         // this function resets variables, which may have changed based on resizing
@@ -169,7 +162,7 @@
                 postTops.push(Math.floor(post.getBoundingClientRect().top) + window.pageYOffset);
             });
     
-            const pagePosition = window.pageYOffset + 450;
+            const pagePosition = window.pageYOffset + 375;
             counter = 0;
     
             postTops.forEach(function (post) { if (pagePosition > post) { counter++; } });

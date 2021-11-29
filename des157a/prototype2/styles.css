@@ -1,0 +1,343 @@
+*{
+    list-style-type: none;
+}
+
+
+.one {
+    background-color: rgb(255, 255, 255);
+    transition: all 3s;
+}
+
+.two {
+    background-color: #6A3434;
+    transition: all 3s;
+}
+
+.three {
+    background-color: #472323;
+    transition: all 3s;
+}
+
+.four {
+    background-color: #311818;
+    transition: all 3s;
+}
+
+.five {
+    background-color: #0f0808;
+    transition: all 3s;
+}
+
+/* changed the style of the figure */
+/* there are gaps on the side of the image? */
+
+body {
+    background-color: #fef5ff00;
+    font-family: playfair-display, serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 1368px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+#allButtons div{
+    position: absolute;
+    width: 1368px;
+    height: 500px;
+}
+
+
+#mainSection{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 1368px;
+   height: 768px;
+}
+
+/* deleted the width/height restriction, unnecessary */
+
+figure {
+    display: block;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+figure img {
+    position: absolute;
+    transition: all 3s ease;
+}
+
+.sect1{
+    width: 100%;
+    transition: all 1.25s ease-out;
+}
+
+.sect2,
+.sect3,
+.sect4,
+.sect5,
+.sect6{
+    transform: scale(150%);
+    transition: all 1s ease-out;
+}
+
+
+.sect2 {
+    left: 200px;
+    
+}
+
+.sect3 {
+    left: -650px;
+}
+
+.sect4 {
+    left: 200px;
+}
+
+.sect5 {
+    left: -650px;
+}
+
+.sect6 {
+    left: 200px;
+}
+
+
+
+
+#circles {
+    position: absolute;
+}
+
+#middleText {
+    font-size: 2em;
+    position: absolute;
+    left: 30%;
+    bottom: 40%;
+}
+
+#circles div button{
+    position: absolute;
+    width: 312px;
+    height: 312px;
+    border-radius: 100%;
+    border: none;
+/* 
+desaturated the background-color of the buttons */
+    background-color: rgba(204, 152, 178, 0.603);
+    transition: 2s;
+}
+#circles div button:hover{
+    background-color: rgba(125, 255, 255, 0);
+}
+
+/* changed all the positioning of the buttons */
+
+
+#circle0{
+    top: 300px;
+    left: 0;
+    /* background-color: #311818; */
+}
+
+#circle1 {
+    top: 1205px;
+    left: 223px;
+}
+
+#circle2 {
+    top: 2106px;
+    left: 852px;
+}
+
+#circle3 {
+    top: 3079px;
+    left: 201px;
+}
+
+#circle4 {
+    top: 3976.54px;
+    left: 862px;
+}
+
+#circle5 {
+    top: 4880px;
+    left: 194px;
+}
+
+
+/* Overlay CSS */
+
+.overlay {
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: #6A3434;
+    overflow-y: hidden;
+}
+
+.storyText {
+    position: relative;
+    width: 30%;
+    background-color: #6A3434;
+    padding: 100px;
+    overflow: hidden;
+    color: white;
+}
+
+.storyImage {
+    position: relative;
+    top: 175px;
+    width: 75%;
+}
+
+.storyContainer {
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    text-align: center;
+    left: 50%;
+}
+
+button {
+    /* glenda commented out the width and height */
+    /* width: 200px;
+    height: 50px; */
+    padding: 10px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgb(255, 228, 251);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(166, 255, 255);
+}
+
+
+.buttonContainer {
+    /* glenda added position */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* glenda commented out the padding */
+    /* padding-top: 50px; */
+}
+
+p {
+    /* from glenda: I think this much line height dissociates the lines of text to be read as a group, so I recommend lessening the value */
+    line-height: 2.75em;
+    margin-bottom: 25px;
+}
+
+h1 {
+    border-bottom: black;
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: flex;
+}
+
+
+#waves{
+    position: relative;
+    top: 598px;
+    left: -154px;
+}
+
+/* Boba Ball Animations */
+.ball{
+    position: absolute;
+    border-radius: 100%;
+    background-color: rgb(104, 177, 104);
+
+    animation-name: boba1ani;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+#boba1{
+    width: 42px;
+    height: 42px;
+
+    top: 997px;
+    left: 651px;
+
+    animation-duration: 6s;
+}
+
+
+#boba2{
+    width: 69px;
+    height: 69px;
+
+    top: 1085px;
+    left: 1217px;
+
+    animation-duration: 5s;
+}
+
+#boba3{
+    width: 69px;
+    height: 69px;
+
+    top: 1723px;
+    left: 112px;
+
+    animation-duration: 4s;
+}
+
+#boba4{
+    width: 55px;
+    height: 55px;
+
+    top: 2323px;
+    left: 699px;
+
+    animation-duration: 3s;
+}
+
+
+@keyframes boba1ani {
+
+    from{
+        margin-top:20px;
+    }
+    to{
+        margin-top: 50px;
+    }
+    0% {background-color:#f9dbff;}
+    25% {background-color: #ec9ac7;}
+    50% {background-color: #d87093;}
+    75% {background-color: #b1436d;}
+    100% {background-color:#94306e}
+}
+
+footer{
+    display: flex;
+    position: absolute;
+    top:5500.43px;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+}
