@@ -1,0 +1,106 @@
+body{
+    background-color: rgb(255, 255, 255);
+    color: rgb(63, 63, 63);
+    margin: auto;
+    padding: 50px;
+
+    font-family: playfair-display, serif;
+    font-weight: 400;
+    font-style: normal; 
+    overflow-x: hidden;
+}
+
+#userTests{
+    display: flex;
+    background-color: rgb(190, 255, 255);
+    border-radius: 30px;
+    padding: 20px;
+    transition: ease-in .5s;
+}
+
+#userTests:hover{
+    background-color: rgb(211, 81, 81);
+    color: white;
+    transform: scale(105%);
+    transition: 1s ease-in-out;
+}
+
+#userTests div{
+    padding: 20px;
+    width: 30%;
+}
+
+p{
+    line-height: 2.5em;
+}
+
+#projectGoals{
+    background-color: rgb(216, 185, 255);
+    color: rgb(48, 48, 48);
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px;
+    transition: ease-in .5s;
+}
+
+#projectGoals:hover{
+    background-color: rgb(16, 47, 77)  ;
+    transform: scale(105%);
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+#strategies{
+    display: flex;
+    padding: 20px;
+    margin: auto;
+    background-color: rgb(255, 246, 246);
+    border-radius: 30px;
+    transition: .5s ease-in;
+}
+
+#strategies:hover{
+    background-color: rgb(94, 31, 39);
+    color: white;
+    transform: scale(105%);
+    transition: 1s ease-in-out;
+}
+
+
+#strategies div{
+    padding: 50px;
+    width: 45%;
+}
+
+#expGoals{
+    background-color: rgb(73, 126, 119);
+    color: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px;
+    transition: .5s ease-in;
+}
+
+#expGoals:hover{
+    transform:scale(105%);
+    color:rgb(255, 255, 255);
+    background-color: rgb(53, 71, 53);
+    transition: 1s ease-in-out;
+}
+
+.one{ background-color: rgb(255, 255, 255); transition: all 3s;}
+.two{ background-color: rgb(213, 228, 255); transition: all 3s;}
+.three{ background-color: rgb(255, 234, 210); transition: all 3s;}
+.four { background-color: rgb(247, 187, 255); transition: all 3s;}
+.five { background-color: rgb(255, 223, 181); transition: all 3s;}
+
+footer{
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(40, 34, 126);
+}

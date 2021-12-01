@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Test Results</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/mug3itx.css">
+</head>
+<body>
+    <section id="introduction">
+        <h1>User Test</h1>
+        <p>For my tests, I observed how my user would interact with my screen and wrote my notes down to highlight different things I needed fix</p>
+    </section>
+  
+    <section id="userTests">
+        <div id="userOne">
+            <h2>Gennifer Hom</h2>
+            <figure>
+                <img src="images/GenniferTest.png" alt="Gennifer">
+            </figure>
+            <p> Gennifer mentioned that the viewport is broken. When she tried scrolling on the page, she scroll is too much. I noticed that the overflow needs to stop. The scroll needs to be tweaked, and the section height needs to change
+                </br>
+            She also mentioned that the page should not go back to the top. A minor tweak is that the footer should be positioned at the bottom. There is a lot of minor flaws in the footer position, where the display flex was a little bit weird.
+            </p>
+        </div>
+    
+        <div id="userTwo">
+            <h2>Sally Kim</h2>
+            <figure>
+                <img src="images/Sally.png" alt="Sally">
+            </figure>
+            <p>Sally first had trouble with the scroll. The scroll was very jittery and it confused her because it did not zoom in at the corresponding buttons. The page also breaks up with the overlay, so it also confused her.She mentioned that this was a big step up than the previous design with very minimal javsacript, and she appreciated the minimalism still. 
+            </br>
+            Sally advised me to have the mouse-hover effects to be more quicker so the user's would have more time to appreciate the photocovers without the filter. She also mentioned that I should include more design elements / indicators for the users to know which photos they are looking at.
+            </p>
+        </div>
+        <div id="userTwo">
+            <h2>Victoria Huynh</h2>
+            <figure>
+                <img src="images/Victoria.png"alt="Sally">
+            </figure>
+            <p>Victoria's initial impression was that the page colors were very vibrant. She saw that my theme was very solid. As she navigated through my page, the page started breaking up. The scroll was very confusing and she was very confused with what to do. As she eventually reached to an image, she noticed that the image was out of the viewport. 
+            </br>
+            She recommended me to use another color for the opacity. The hover state should be longer, and the colors should be more vibrant. She also recommended me to use more indicators or visual cues to let the users know what they should be doing. 
+            </p>
+        </div>
+    </section>
+   
+    <section id="projectGoals">
+        <h2>Project Goals</h2>
+        <p>
+            After conducting the usability test, I attempted to fix the scroll-in-zoom effect on javascript. A lot of my users were very confused about the jitteriness of the scroll effect, and were left with bad user experience. They had a hard time navigating through the site, so I made sure to make the scroll effect as accurate and smooth as possible.
+        </br>
+        Another edit I want to revise is to increase the color saturation of the mouse-hover opacity to make it more obvious for the users. The users have reccomended me to choose a more vibrant color to be a good indicator of a hover interaction. They also told me to have more visual cues in the website to have more guidance on where to scroll. This allows the users to have a better user experience because they would have an easier time navigating through the pages. 
+        </p>
+
+        
+    </section>
+    <section id="strategies">
+        <div id="designStrategies">
+            <h2>Edits</h2>
+            <p>I want to:</p>
+            <ul>
+                <li>Recreate the scroll-in-zoom effect</li>
+                <li>Recolor the hover-states</li>
+                <li>Include more indications on the designs</li>
+                <li>Fix the overflow bleeds</li>
+            </ul>
+        </div>
+
+        <div id="intStrategies">
+            <h2>Usability Goals</h2>
+            <p>I want to:</p>
+            <ul>
+                <li>Employ Smooth Transitions</li>
+                <li>Create an enjoyable scroll experience</li>
+                <li>Make the hover states be more prominent</li>
+                <li>Make the overlays be seamless</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="expGoals">
+        <h2>Reflection</h2>
+        <p>Overall, the usability tests were very helpful in determining my weak points on my site. There were areas that needed work, which I did not realize. The users were very friendly and provided constructive feedback for me to improve the site. For example, all my users shared that they would like to see more visual indicators on the site when scrolling down the page. This could help guide the users when navigating through the scroll-zoom effect on the page. Overall, I learned that I needed to continue working on the javascript functions for the scroll-zoom effect, while also maintaining a good user experience.</p>
+    </section>
+
+    <script>
+        var pageTop;
+        var bodyTag = document.querySelector('body');
+        window.addEventListener('scroll', function(){
+            pageTop= window.pageYOffset;
+
+            switch(true){
+                case pageTop <500: bodyTag.className = "one"; break;
+                case pageTop <1000: bodyTag.className = "two"; break;
+                case pageTop <1500: bodyTag.className = "three"; break;
+                case pageTop < 2000: bodyTag.className = "four"; break;
+                default: bodyTag.className = "five"
+
+            }
+
+        });
+
+    </script>
+    <footer>
+        <div>
+            <a href="mailto:comak@ucdavis.edu">My Email</a>
+        </div>
+        <div>
+            <a href="https://validator.w3.org/check?uri=referer">html validator</a>
+        </div>
+        <div>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">css Validator</a>
+        </div>
+    </footer>
+</body>
+
+</html>

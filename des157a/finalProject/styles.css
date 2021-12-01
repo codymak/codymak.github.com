@@ -74,7 +74,7 @@ figure img {
 
 .sect1{
     width: 100%;
-    transition: all 1.25s ease-out;
+    transition: all 1s ease-out;
 }
 
 .sect2,
@@ -82,8 +82,8 @@ figure img {
 .sect4,
 .sect5,
 .sect6{
-    transform: scale(150%);
-    transition: all 1s ease-out;
+    transform: scale(130%);
+    transition: all 1.5s ease-out;
 }
 
 
@@ -93,7 +93,7 @@ figure img {
 }
 
 .sect3 {
-    left: -650px;
+    left: -750px;
 }
 
 .sect4 {
@@ -101,7 +101,7 @@ figure img {
 }
 
 .sect5 {
-    left: -650px;
+    left: -750px;
 }
 
 .sect6 {
@@ -181,6 +181,7 @@ desaturated the background-color of the buttons */
     left:0;
     background-color: #6A3434;
     overflow-y: hidden;
+
 }
 
 .storyText {
