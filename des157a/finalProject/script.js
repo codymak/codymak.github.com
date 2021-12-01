@@ -29,12 +29,15 @@
     });
 
     const sections = document.querySelectorAll('section');
-
+    // var myBody= document.getElementById('thisBody');
 
     document.querySelector('#circle1').addEventListener('click', function() {
         sections[0].className = "hidden";
         sections[1].className = "overlay showing";
+
+        // document.myBody.classList.add("bodyFreeze")
         topFunction();
+
     });
 
     document.querySelector('#circle2').addEventListener('click', function() {
@@ -152,7 +155,7 @@
     
                 resetPagePosition();
     
-            }, 500);
+            }, 300);
         });
     
         // this function resets variables, which may have changed based on resizing
